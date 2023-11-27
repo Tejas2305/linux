@@ -1,0 +1,49 @@
+ls: list directory
+mkdir: makes a folder
+touch: makes a empty file
+rm: deletes files
+rmdir: deletes empty folder
+clear: clears all output present on screen
+mv: moves / renames file.
+pwd: present working directory
+ps: list process
+cp: copy file
+uname: current folder name only.
+cd: chnage directory.
+locate: search files.
+whereis: gives file location
+which: gives location of file if present in path
+ln: makes shortcut.
+man: manual / guide of any command.
+echo: print the given text to console.
+whoami: users name
+who: info about logged users
+sort: sorts the order of output.
+whereis: get exact location of file.
+cal: prints calendar.
+df: details of files.
+wc: gives words character and lines as output.
+head: shows begining of file
+tail: gives ending of file.
+tar: used for zipping file.
+vi/ vim: editing file 
+
+LS:
+    -a, --all: List all entries
+    -l: listing with details.
+    -h: When used with -l, display file sizes in a human-readable format (e.g., KB, MB, GB). [ls -lh]
+    -t: Sort by modification time, newest first.
+    -S: Sort by file size.
+
+TAR:
+    -c: Create a new archive
+    -f:When used with the -c option, use the filename specified for the
+        creation of the tar file; when used with the -x option, unarchive
+        the specified file.
+    -t: Show the list of files in the tar file.
+    -v: Show the progress of the files being archived.
+    -x: Extract files from an archive.
+    -z: Compress the tar file with gzip .
+    -j: Compress archive through bzip2.
+    -r: Append or update files or directories to existing archive file.
+    -W: Verify a archive file. 
