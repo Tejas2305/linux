@@ -1,32 +1,129 @@
 ls: list directory
+    Syntax: ls
+
 mkdir: makes a folder
-touch: makes a empty file
+    Syntax: mkdir (folder name)
+    Example: mkdir my_folder
+
+touch: makes an empty file
+    Syntax: touch (file name)
+    Example: touch my_file.txt
+
 rm: deletes files
-rmdir: deletes empty folder
-clear: clears all output present on screen
-mv: moves / renames file.
+    Syntax: rm (file name)
+    Example: rm my_file.txt
+
+rmdir: deletes an empty folder
+    Syntax: rmdir (folder name)
+    Example: rmdir my_folder
+
+clear: clears all output present on the screen
+    Syntax: clear
+
+mv: moves/renames file
+    Syntax: mv (source) (destination)
+    Example: mv old_file.txt new_location/
+
 pwd: present working directory
-ps: list process
+    Syntax: pwd
+
+ps: list processes
+    Syntax: ps
+
 cp: copy file
+    Syntax: cp (source) (destination)
+    Example: cp file.txt backup/
+
 uname: current folder name only.
-cd: chnage directory.
-locate: search files.
+    Syntax: uname
+
+cd: change directory
+    Syntax: cd (directory)
+    Example: cd documents/
+
+locate: search files
+    Syntax: locate (file name)
+    Example: locate myfile
+
 whereis: gives file location
+    Syntax: whereis (command/file)
+    Example: whereis ls
+
 which: gives location of file if present in path
-ln: makes shortcut.
-man: manual / guide of any command.
-echo: print the given text to console.
-whoami: users name
+    Syntax: which (command)
+    Example: which ls
+
+ln: makes a shortcut.
+    Syntax: ln -s (source) (link)
+    Example: ln -s /path/to/source/file /path/to/link
+
+man: manual/guide of any command.
+    Syntax: man (command)
+    Example: man ls
+
+echo: print the given text to the console
+    Syntax: echo (text)
+    Example: echo "Hello, World!"
+
+whoami: user's name
+    Syntax: whoami
+
 who: info about logged users
-sort: sorts the order of output.
+    Syntax: who
+
+sort: sorts the order of output
+    Syntax: sort (file)
+    Example: sort my_file.txt
+
 whereis: get exact location of file.
+    Syntax: whereis (file)
+    Example: whereis myfile
+
 cal: prints calendar.
+    Syntax: cal
+
 df: details of files.
-wc: gives words character and lines as output.
-head: shows begining of file
-tail: gives ending of file.
+    Syntax: df
+
+wc: gives words, characters, and lines as output.
+    Syntax: wc (file)
+    Example: wc my_file.txt
+
+head: shows the beginning of a file
+    Syntax: head (file)
+    Example: head my_file.txt
+
+tail: gives the ending of a file.
+    Syntax: tail (file)
+    Example: tail my_file.txt
+
 tar: used for zipping file.
-vi/ vim: editing file 
+    Syntax: tar -cvf (archive.tar) (file/directory)
+    Example: tar -cvf archive.tar my_directory
+
+bzip2: used for zipping file.
+    Syntax: bzip2 (file)
+    Example: bzip2 my_file.txt
+
+gzip: used for zipping file.
+    Syntax: gzip (file)
+    Example: gzip my_file.txt
+
+gunzip: The filename.gz compressed file is deleted and replaced with filename.
+    Syntax: gunzip (filename.gz)
+    Example: gunzip myfile.gz
+
+zip: used for zipping file.
+    Syntax: zip (archive.zip) (file/directory)
+    Example: zip archive.zip my_directory
+
+vi/vim: editing file
+    Syntax: vi (file)
+    Example: vi my_file.txt
+
+spell: finds out spelling mistakes in a file.
+    Syntax: spell (file)
+    Example: spell my_text_file
 
 LS:
     -a, --all: List all entries
@@ -34,8 +131,9 @@ LS:
     -h: When used with -l, display file sizes in a human-readable format (e.g., KB, MB, GB). [ls -lh]
     -t: Sort by modification time, newest first.
     -S: Sort by file size.
+    
 
-TAR:
+ZIP / TAR / BZIP2 / GZIP:
     -c: Create a new archive
     -f:When used with the -c option, use the filename specified for the
         creation of the tar file; when used with the -x option, unarchive
@@ -46,4 +144,61 @@ TAR:
     -z: Compress the tar file with gzip .
     -j: Compress archive through bzip2.
     -r: Append or update files or directories to existing archive file.
-    -W: Verify a archive file. 
+    -W: Verify a archive file.
+
+tar -cvf archive_name.tar.gz folder_to_compress
+ 
+VI EDITOR:
+    i: Insert at cursor (goes into insert mode)
+    a: Write after cursor (goes into insert mode)
+    A: Write at the end of line (goes into insert mode)
+    ESC: Terminate insert mode
+    u: Undo last change
+    U: Undo all changes to the entire line
+    o: Open a new line (goes into insert mode)
+    dd: Delete line
+    3dd: Delete 3 lines.
+    D: Delete contents of line after the cursor
+    C: Delete contents of a line after the cursor and insert new text. Press ESC key to end insertion.
+    dw: Delete word
+    4dw:Delete 4 words
+    cw: Change word
+    x: Delete character at the cursor
+    r: Replace character
+    R: Overwrite characters from cursor onward
+    s: Substitute one character under cursor continue to insert
+    S: Substitute entire line and begin to insert at the beginning of the line
+    ~: Change case of individual character
+    k: Move cursor up
+    j: Move cursor down
+    h: Move cursor left
+    l: Move cursor right
+    Shift+zz: Save the file and quit
+    :w: Save the file but keep it open
+    :q: Quit without saving
+    :wq: Save the file and quit 
+
+SORT:
+    -o: Allows you to specify an output file.
+    -r: Allows a reverse-order sort.
+    -n: Sorts a file numerically.
+    -k: Sots a certain column.
+    -c: Checks if the file is sorted or not.
+    -u: Sorts and remove duplicates.
+    -M: Sorts by months. 
+
+WC :
+    -l: Prints the number of lines present in a file.
+    -w: Prints the number of words present in a file.
+    -c Displays count of bytes present in a file.
+    -m Displays count of characters from a file.
+    -L Prints the length of longest (number of characters) line in a file. 
+
+SPELL:
+    -n Print line numbers.
+    -o Print file names.
+
+CHMOD:
+    u=rwx, g=rwx, o=rwx filename.txt
+    
+#!/bin/bash
